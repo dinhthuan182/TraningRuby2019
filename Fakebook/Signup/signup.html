@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styleSignupPage.css">
+	<meta charset="utf-8">
+	
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+	<title>Signup page</title>
+	<script type="text/javascript" src="./signupJS.js"></script>
+</head>
+<body>
+	<header class="row">
+		<div class="col-12 col-sm-4 col-md-3">
+			<a href="#" class="navbar-brand text-white mt-2 float-right"><b>Fakebook</b></a>
+		</div>
+		<div class="col-0 col-sm-6 col-md-5 ">
+			<input class="form-control mt-2 w-75" type="search" placeholder="Search Photo/Album" aria-label="Search">
+		</div>
+		<div class="col-0 col-sm-2 col-md-4">
+			<a href="#" class="nav-link text-white pt-3 ml-5"><b>Login</b></a>
+		</div>
+	</header>
+	<form action="#" id="signupForm">
+		<div class="form-group">
+			<p><b>Fakebook Signup</b></p>
+		</div>
+		<div class="form-group">
+			<div>
+				<label><b>First name:</b></label>
+				<input type="text" class="form-control" id="firstName" placeholder="Enter first name" name="fname" required>
+			</div>
+			<div>
+				<label><b>Last name:</b></label>
+				<input type="text" class="form-control" id="lastName" placeholder="Enter last name" name="lname" required>
+			</div>
+			<div>
+				<label><b>Username:</b></label>
+				<input type="email" class="form-control" id="email" placeholder="Enter username" name="username" required>
+			</div>
+			<div>
+				<label for="password"><b>Password:</b></label>
+				<input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+			</div>
+			<div>
+				<label for="passwordC"><b>Password Confirmation:</b></label>
+				<input type="password" class="form-control" id="passwordC" placeholder="Enter password Confirmation" name="passwordC" required>
+			</div>
+			<div class="text-center mt-3 ml-0">
+				<button class="btn btn-primary" type="submit">Signup</button>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
