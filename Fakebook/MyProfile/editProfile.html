@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="myProfileStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <title>edit profile</title>
+    <script type="text/javascript" src="myProfileJS.js"></script>
+</head>
+<body class="container-fluid" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <header class="row">
+    <div class="col-0 col-sm-3 col-md-3">
+      <a href="#" class="navbar-brand text-white mt-2 float-right"><b>Fakebook</b></a>
+    </div>
+    <div class="col-12 col-sm-4 col-md-3">
+      <input class="form-control mt-2" type="search" placeholder="Search Photo/Album" aria-label="Search">
+    </div>
+    <div class="col-0 col-sm-3 col-md-3">
+      <a href="#" class="nav-link d-inline-flex text-white m-0 float-right">
+        <img src="../images/logoLogin.png" class="rounded-circle mr-2" id="avatarTop">
+        <p class="text-white pt-2 m-0"><b>Dinh Thuan</b></p>
+      </a>
+    </div>
+    <div class="col-0 col-sm-2 col-md-3">
+      <a href="#" class="nav-link text-white pt-3 m-0"><b>Logout</b></a>
+    </div>
+  </header>
+
+
+  <section class="container-fluid">
+    <!--Tab feeds va discover-->
+    <div class="row">
+      <div class="col-md-2">
+        <div class="container mt-3">
+          <div class="navbar navbar-expand-md navbar-light bg-lignt p-0">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class=" collapse navbar-collapse p-0" id="collapsibleNavbar">
+              <ul class="navbar-nav nav nav-tabs flex-column">
+                <li class="nav-item p-0">
+                  <a class="nav-link text-primary" data-toggle="tab" href="#feedsPage"><b>Feeds</b></a>
+                </li>
+                <li class="nav-item p-0">
+                  <a class="nav-link text-primary" data-toggle="tab" href="#discoverPage"><b>Discover</b></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="container">
+          <h2>Edit User Profile</h2>
+          <hr>
+          <form>
+            <div class="form-group row">
+              <div class="col-md-3"></div>
+              <div class="col-md-5" style="  height: 210px;">
+                <div class="input-file-container" style="display: block;">
+                  <img class="rounded-lg" src="../images/img1.jpeg" width="200px" height="200px" style="position: absolute; z-index: 0;" >
+                  <input class="input-file" id="my-file" type="file" style="position: absolute; z-index: 1; margin-top: 160px;" >
+                  <label tabindex="0" for="my-file" class="input-file-trigger">CHANGE</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-3"></div>
+              <div class="col-md-5">
+                <h4 class="text-primary">Basic information</h4>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="editFirstName" class="col-md-3 col-form-label d-flex justify-content-end"><b>First name</b></label>
+              <div class="col-md-5">
+                <input type="text" class="form-control" id="editFirstName" placeholder="first name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="editLastName" class="col-md-3 col-form-label d-flex justify-content-end"><b>Last name</b></label>
+              <div class="col-md-5">
+                <input type="text" class="form-control" id="editLastName" placeholder="last name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="editEmail" class="col-md-3 col-form-label d-flex justify-content-end"><b>Email</b></label>
+              <div class="col-md-5">
+                <input type="Email" class="form-control" id="editEmail" placeholder="email">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-3"></div>
+              <div class="col-md-5">
+                <button type="submit" class="btn btn-success">Save</button>
+              </div>
+            </div>
+          </form>
+          <!--Changr password-->
+          <form>
+            <div class="form-group row">
+              <div class="col-md-3"></div>
+              <div class="col-md-5">
+                <h4 class="text-primary">Change password</h4>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="currentPsw" class="col-md-3 col-form-label d-flex justify-content-end"><b>Current Password</b></label>
+              <div class="col-md-5">
+                <input type="password" name="pwd" class="form-control" id="currentPsw" placeholder="0000000000">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="newPsw" class="col-md-3 col-form-label d-flex justify-content-end"><b>New Password</b></label>
+              <div class="col-md-5">
+                <input type="password" name="pwd" class="form-control" id="newPsw" placeholder="0000000000">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="verifyPsw" class="col-md-3 col-form-label d-flex justify-content-end"><b>Verify Password</b></label>
+              <div class="col-md-5">
+                <input type="password" name="pwd" class="form-control" id="verifyPsw" placeholder="0000000000">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-3"></div>
+              <div class="col-md-5">
+                <button type="submit" class="btn btn-success">Save</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
