@@ -3,9 +3,13 @@
 	background-color: #184785;
 }
 
-#avatar {
+#avatarTop {
 	height: 40px;
 	width: 40px;
+}
+#avatarMain {
+  height: 220px;
+  width: 220px;
 }
 #btnFollow{
 	width: 60px;
@@ -20,5 +24,3 @@
   height: 220px;
   width: 220px;
 }
-
-
