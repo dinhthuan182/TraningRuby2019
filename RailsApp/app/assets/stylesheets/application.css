@@ -17,6 +17,9 @@ header {
   overflow: hidden;
   background-color: #184785;
 }
+section {
+  background-color: #bec2c5;
+}
 
 #avatarTop {
   height: 40px;
@@ -45,4 +48,15 @@ header {
 
 .imgView:active{
   transform: scale(0.5);
+}
+#btnFollow {
+  width: 95px;
+  height: 35px;
+  font-size: 15px;
+  background-color: #ffc107;
+  color: white;
+  border-color: #ffc107;
+}
+#btnFollow:hover {
+  transform: scale(1.1)
 }

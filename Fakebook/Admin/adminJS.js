@@ -1,18 +1,14 @@
 document.querySelector("html").classList.add('js');
+function showImage(){
+          if(this.files && this.files[0])
+          {
+            var obj = new FileReader();
+            obj.onload = function(data){
+              var image = document.getElementById("image");
+              image.src = data.target.result;
+              image.style.display = "block";
+            }
+            obj.readAsDataURL(this.files[0]);
 
-var fileInput  = document.querySelector( ".input-file" ),
-    button     = document.querySelector( ".input-file-trigger" ),
-    the_return = document.querySelector(".file-return");
-
-button.addEventListener( "keydown", function( event ) {
-    if ( event.keyCode == 13 || event.keyCode == 32 ) {
-        fileInput.focus();
-    }
-});
-button.addEventListener( "click", function( event ) {
-   fileInput.focus();
-   return false;
-});
-fileInput.addEventListener( "change", function( event ) {
-    the_return.innerHTML = this.value;
-});
+          }
+        }

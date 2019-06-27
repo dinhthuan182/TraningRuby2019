@@ -1,0 +1,17 @@
+<p>
+  <strong>title:</strong>
+  <%= @photo.title %>
+</p>
+
+<p>
+  <strong>description:</strong>
+  <%= @photo.description %>
+</p>
+<p>
+  <strong>image:</strong>
+  <img src="<%= @photo.image %>">
+
+</p>
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

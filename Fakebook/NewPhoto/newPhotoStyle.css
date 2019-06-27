@@ -40,38 +40,61 @@ button.btnUpload {
   top: 0;
   opacity: 0;
 }
-      input.btnSubmit {
-        background-color: green;
-        color: white;
-        transition: transform .2s;
+input.btnSubmit {
+  background-color: green;
+  color: white;
+  transition: transform .2s;
 
-      }
-      input.btnSubmit:hover{
-        background-color: #0080008f;
-      }
-      input.btnSubmit:active{
-        background-color: #0080008f;
-        transform: scale(1.05);
-      }
+}
+input.btnSubmit:hover{
+  background-color: #0080008f;
+}
+input.btnSubmit:active{
+  background-color: #0080008f;
+  transform: scale(1.05);
+}
 
 
-      button.btnDelete {
-        background-color: red;
-        color: white;
-        transition: transform .2s;
-      }
+button.btnDelete {
+  background-color: red;
+  color: white;
+  transition: transform .2s;
+}
 
-      button.btnDelete:hover {
-        background-color: #ff0000a8;
-        color: white;
-      }
+button.btnDelete:hover {
+  background-color: #ff0000a8;
+  color: white;
+}
 
-      button.btnDelete:active {
-        background-color: #ff0000a8;
-        color: white;
-        transform: scale(1.05);
-      }
-      .upload-btn-wrapper:hover {
-        transition: transform .2s;
-        transform: scale(0.95);
-      }
+button.btnDelete:active {
+  background-color: #ff0000a8;
+  color: white;
+  transform: scale(1.05);
+}
+.upload-btn-wrapper:hover {
+  transition: transform .2s;
+  transform: scale(0.95);
+}
+.img_wrp {
+  display: inline-block;
+  position: relative;
+}
+.btnClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

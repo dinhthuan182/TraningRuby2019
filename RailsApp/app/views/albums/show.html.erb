@@ -1,0 +1,17 @@
+<p>
+  <strong>title:</strong>
+  <%= @album.title %>
+</p>
+
+<p>
+  <strong>description:</strong>
+  <%= @album.description %>
+</p>
+<p>
+  <strong>image:</strong>
+  <img src="<%= @album.list_image %>">
+
+</p>
+
+<%= link_to 'Edit', edit_album_path(@album) %> |
+<%= link_to 'Back', albums_path %>

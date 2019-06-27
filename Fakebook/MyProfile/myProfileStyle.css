@@ -24,7 +24,17 @@
   height: 220px;
   width: 220px;
 }
-
+#btnFollow {
+  width: 95px;
+  height: 35px;
+  font-size: 15px;
+  background-color: #ffc107;
+  color: white;
+  border-color: #ffc107;
+}
+#btnFollow:hover {
+  transform: scale(1.1)
+}
 .input-file-container {
   position: relative;
   width: 100px;
