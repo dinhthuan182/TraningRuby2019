@@ -1,0 +1,77 @@
+  header {
+	overflow: hidden;
+	background-color: #184785;
+}
+
+#avatarTop {
+	height: 40px;
+	width: 40px;
+}
+
+#btnFollow{
+	width: 60px;
+	height: 25px;
+	font-size: 8px;
+}
+.sizePhotos {
+  height: 180px;
+  width: 180px;
+}
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+button.btnUpload {
+  width:100%;
+  height: 100%;
+  border: 3px dashed #a78f8f;
+  color: gray;
+  background-color: #d6bfbf24;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.upload-btn-wrapper input[type=file] {
+  font-size: 600px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+      input.btnSubmit {
+        background-color: green;
+        color: white;
+        transition: transform .2s;
+
+      }
+      input.btnSubmit:hover{
+        background-color: #0080008f;
+      }
+      input.btnSubmit:active{
+        background-color: #0080008f;
+        transform: scale(1.05);
+      }
+
+
+      button.btnDelete{
+        background-color: red;
+        color: white;
+        transition: transform .2s;
+      }
+
+      button.btnDelete:hover{
+        background-color: #ff0000a8;
+        color: white;
+      }
+
+      button.btnDelete:active{
+        background-color: #ff0000a8;
+        color: white;
+        transform: scale(1.05);
+      }
+      .upload-btn-wrapper:hover{
+        transition: transform .2s;
+        transform: scale(0.95);
+      }
