@@ -9,31 +9,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-  <title></title>
+  <title>Home Page</title>
+    <script type="text/javascript" src="feedsJS.js"></script>
 </head>
-<body class="container-fluid" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body class="container-fluid p-0" data-spy="scroll" data-target=".navbar" data-offset="50">
   <header class="row">
-    <div class="col-0 col-sm-3 col-md-3">
+    <div class="col-0 col-sm-3 col-md-2">
       <a href="#" class="navbar-brand text-white mt-2 float-right"><b>Fakebook</b></a>
     </div>
-    <div class="col-12 col-sm-4 col-md-3">
-      <input class="form-control mt-2" type="search" placeholder="Search Photo/Album" aria-label="Search">
+    <div class="col-12 col-sm-4 col-md-6">
+      <input class="form-control mt-2 w-75" type="search" placeholder="Search Photo/Album" aria-label="Search">
     </div>
-    <div class="col-0 col-sm-3 col-md-3">
+    <div class="col-0 col-sm-3 col-md-2">
       <a href="#" class="nav-link d-inline-flex text-white m-0 float-right">
-        <img src="../images/logoLogin.png" class="rounded-circle mr-2" id="avatar">
+        <img src="../images/logoLogin.png" class="rounded-circle mr-2" id="avatarTop">
         <p class="text-white pt-2 m-0"><b>Dinh Thuan</b></p>
       </a>
     </div>
-    <div class="col-0 col-sm-2 col-md-3">
+    <div class="col-0 col-sm-2 col-md-1">
       <a href="#" class="nav-link text-white pt-3 m-0"><b>Logout</b></a>
     </div>
   </header>
 
 
-  <section class="container-fluid bg-secondary">
+  <section class="container-fluid p-0">
     <!--modal photo-->
-    <div class="modal fade" id="mobalPhoto">
+    <div class="modal fade" id="modalPhoto">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
               <!-- Modal Header -->
@@ -111,7 +112,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class=" collapse navbar-collapse p-0" id="collapsibleNavbar">
+            <div class=" collapse navbar-collapse ml-5" id="collapsibleNavbar">
               <ul class="navbar-nav nav nav-tabs flex-column">
                 <li class="nav-item p-0">
                   <a class="nav-link text-primary" data-toggle="tab" href="#feedsPage"><b>Feeds</b></a>
@@ -148,25 +149,28 @@
                 <div class="row d-flex">
                   <!-- hinh anh 1-->
                   <div class="col-sm-12 col-md-6 border rounded p-0 mt-2  d-flex" >
-                    <div class="container">
-                      <div class="row" data-toggle="modal" data-target="#modalPhoto">
-                        <div class="col-12 col-sm-12 col-lg-6 p-0 ">
+                    <div class="container-fluid m-2">
+                      <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 p-0 sizePhotos" data-toggle="modal" data-target="#modalPhoto">
                             <img class="rounded-sm w-100 h-100" src="../images/img1.jpeg">
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-md-6">
                           <div>
                             <a href="#" class="nav-link d-inline-flex pl-0">
-                              <img src="../images/logoLogin.png" class="rounded-circle" id="avatar">
+                              <img src="../images/logoLogin.png" class="rounded-circle" id="avatarTop">
                               <p class="text-primary pt-2 pl-2"><b>Dinh Thuan</b></p>
                             </a>
-                          <button type="button" class="btn btn-warning mt-2 mr-2" style="width: 50px; height: 22px; font-size: 7px; float: right;"><b>following</b></button>
+                          <button type="button" class="btn mt-3 mr-1" id= "btnFollow"><b>Following</b></button>
                           </div>
-                          <div class="pr-2">
+                          <div class="pr-2" data-toggle="modal" data-target="#modalPhoto">
                             <h4><b>Title</b></h4>
                             <p>Description: di choi voi ban be, ngam canh thien nhien</p>
                           </div>
                           <div class="container d-inline pl-0">
-                            <i class="fas fa-heart "> 120</i>
+                            <div class="d-inline-flex">
+                              <img class="btnLike" src="../images/like.png">
+                              <p style="font-size: 20px; margin: 5px;"><b> 120</b></p>
+                            </div>
                             <p class=" pr-2 float-right"> 1/1/2019</p>
                           </div>
                         </div>
@@ -174,32 +178,6 @@
                     </div>
                   </div>
                 <!-- hinh anh 2-->
-                  <div class="col-sm-12 col-md-6 border rounded p-0 mt-2  d-flex" >
-                    <div class="container">
-                      <div class="row" data-toggle="modal" data-target="#mobalPhoto">
-                        <div class="col-12 col-sm-12 col-lg-6 p-0">
-                            <img class="rounded-sm w-100 h-100" src="../images/img1.jpeg">
-                        </div>
-                        <div class="col-lg-6 pr-0">
-                          <div>
-                            <a href="#" class="nav-link d-inline-flex pl-0">
-                              <img src="../images/logoLogin.png" class="rounded-circle" id="avatar">
-                              <p class="text-primary pt-2 pl-2"><b>Dinh Thuan</b></p>
-                            </a>
-                          <button type="button" class="btn btn-warning mt-2 mr-2" style="width: 50px; height: 22px; font-size: 7px; float: right;"><b>following</b></button>
-                          </div>
-                          <div class="pr-2">
-                            <h4><b>Title</b></h4>
-                            <p>Description: di choi voi ban be, ngam canh thien nhien</p>
-                          </div>
-                          <div class="container d-inline pl-0">
-                            <i class="fas fa-heart "> 120</i>
-                            <p class=" pr-2 float-right"> 1/1/2019</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
                 </div>
               </div> <!-- end tab photo -->
@@ -208,9 +186,9 @@
                 <div class="row">
                   <!-- album 1-->
                   <div class="col-sm-12 col-md-6 border rounded p-0 mt-2 d-flex" >
-                    <div class="container-fluid">
-                      <div class="row" data-toggle="modal" data-target="#modalAlbum">
-                        <div class="col-12 col-sm-12 col-lg-6 mt-3 sizePhotos">
+                    <div class="container-fluid m-2">
+                      <div class="row">
+                        <div class="col-12 col-sm-12 col-lg-6 mt-3 sizePhotos" data-toggle="modal" data-target="#modalAlbum">
                           <div class="sizePhotos d-flex justify-content-center m-0">
                             <img class="rounded-sm sizeAlbums" style="position: absolute; z-index: 3;" src="../images/img2.jpeg">
                             <img class="rounded-sm sizeAlbums" style="position: absolute; z-index: 2; transform: rotate(5deg);" src="../images/img4.jpeg">
@@ -221,17 +199,20 @@
                         <div class="col-lg-6 pr-0">
                           <div>
                             <a href="#" class="nav-link d-inline-flex pl-0">
-                              <img src="../images/logoLogin.png" class="rounded-circle" id="avatar">
+                              <img src="../images/logoLogin.png" class="rounded-circle" id="avatarTop">
                               <p class="text-primary pt-2 pl-2"><b>Dinh Thuan</b></p>
                             </a>
-                          <button type="button" class="btn btn-warning mt-2 mr-2" style="width: 50px; height: 22px; font-size: 7px; float: right;"><b>following</b></button>
+                          <button type="button" class="btn mt-3 mr-1" id="btnFollow"><b>Following</b></button>
                           </div>
-                          <div class="pr-2">
+                          <div class="pr-2" data-toggle="modal" data-target="#modalAlbum">
                             <h4><b>Title</b></h4>
                             <p>Description: di choi voi ban be, ngam canh thien nhien</p>
                           </div>
                           <div class="container d-inline pl-0">
-                            <i class="fas fa-heart "> 120</i>
+                            <div class="d-inline-flex">
+                              <img class="btnLike" src="../images/like.png">
+                              <p style="font-size: 20px; margin: 5px;"><b> 120</b></p>
+                            </div>
                             <p class=" pr-2 float-right"> 1/1/2019</p>
                           </div>
                         </div>
@@ -266,25 +247,28 @@
                 <div class="row">
                   <!-- hinh anh 1-->
                   <div class="col-sm-12 col-md-6 border rounded p-0 mt-2  d-flex" >
-                    <div class="container">
-                      <div class="row" data-toggle="modal" data-target="#modalPhoto">
-                        <div class="col-12 col-sm-12 col-lg-6 p-0 ">
+                    <div class="container-fluid m-2">
+                      <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 p-0 sizePhotos " data-toggle="modal" data-target="#modalPhoto">
                             <img class="rounded-sm w-100 h-100" src="../images/img1.jpeg">
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-md-6">
                           <div>
                             <a href="#" class="nav-link d-inline-flex pl-0">
-                              <img src="../images/logoLogin.png" class="rounded-circle" id="avatar">
+                              <img src="../images/logoLogin.png" class="rounded-circle" id="avatarTop">
                               <p class="text-primary pt-2 pl-2"><b>Dinh Thuan</b></p>
                             </a>
-                          <button type="button" class="btn btn-warning mt-2 mr-2" style="width: 50px; height: 22px; font-size: 7px; float: right;"><b>following</b></button>
+                          <button type="button" class="btn mt-3 mr-1" id="btnFollow"><b>Following</b></button>
                           </div>
-                          <div class="pr-2">
+                          <div class="pr-2" data-toggle="modal" data-target="#modalPhoto">
                             <h4><b>Title</b></h4>
                             <p>Description: di choi voi ban be, ngam canh thien nhien</p>
                           </div>
                           <div class="container d-inline pl-0">
-                            <i class="fas fa-heart "> 120</i>
+                            <div class="d-inline-flex">
+                              <img class="btnLike" src="../images/like.png">
+                              <p style="font-size: 20px; margin: 5px;"><b> 120</b></p>
+                            </div>
                             <p class=" pr-2 float-right"> 1/1/2019</p>
                           </div>
                         </div>
@@ -300,9 +284,9 @@
                 <div class="row">
                   <!-- Album 1-->
                   <div class="col-sm-12 col-md-6 border rounded p-0 mt-2 d-flex" >
-                    <div class="container-fluid">
-                      <div class="row" data-toggle="modal" data-target="#modalAlbum">
-                        <div class="col-12 col-sm-12 col-lg-6 mt-3 sizePhotos">
+                    <div class="container-fluid m-2">
+                      <div class="row">
+                        <div class="col-12 col-sm-12 col-lg-6 mt-3 sizePhotos" data-toggle="modal" data-target="#modalAlbum">
                           <div class="sizePhotos d-flex justify-content-center m-0">
                             <img class="rounded-sm sizeAlbums" style="position: absolute; z-index: 3;" src="../images/img2.jpeg">
                             <img class="rounded-sm sizeAlbums" style="position: absolute; z-index: 2; transform: rotate(5deg);" src="../images/img4.jpeg">
@@ -313,17 +297,20 @@
                         <div class="col-lg-6 pr-0">
                           <div>
                             <a href="#" class="nav-link d-inline-flex pl-0">
-                              <img src="../images/logoLogin.png" class="rounded-circle" id="avatar">
+                              <img src="../images/logoLogin.png" class="rounded-circle" id="avatarTop">
                               <p class="text-primary pt-2 pl-2"><b>Dinh Thuan</b></p>
                             </a>
-                          <button type="button" class="btn btn-warning mt-2 mr-2" style="width: 50px; height: 22px; font-size: 7px; float: right;"><b>following</b></button>
+                          <button type="button" class="btn mt-3 mr-1" id="btnFollow"><b>Following</b></button>
                           </div>
-                          <div class="pr-2">
+                          <div class="pr-2" data-toggle="modal" data-target="#modalAlbum">
                             <h4><b>Title</b></h4>
                             <p>Description: di choi voi ban be, ngam canh thien nhien</p>
                           </div>
                           <div class="container d-inline pl-0">
-                            <i class="fas fa-heart "> 120</i>
+                            <div class="d-inline-flex">
+                              <img class="btnLike" src="../images/heart.png">
+                              <p><b> 120</b></p>
+                            </div>
                             <p class=" pr-2 float-right"> 1/1/2019</p>
                           </div>
                         </div>

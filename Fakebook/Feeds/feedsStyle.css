@@ -2,8 +2,11 @@
 	overflow: hidden;
 	background-color: #184785;
 }
+section {
+  background-color: #bec2c5;
+}
 
-#avatar {
+#avatarTop {
 	height: 40px;
 	width: 40px;
 }
@@ -11,14 +14,34 @@
 	width: 60px;
 	height: 25px;
 	font-size: 8px;
+  color: white;
 }
 .sizePhotos {
-  height: 240px;
-  width: 240px;
+  height: 220px;
+  width: 220px;
 }
 .sizeAlbums {
   height: 220px;
   width: 220px;
+}
+#btnFollow {
+  width: 65px;
+  height: 27px;
+  font-size: 10px;
+  float: right;
+  background-color: #ffc107;
+  color: white;
+  border-color: #ffc107;
+}
+#btnFollow:hover {
+  transform: scale(1.1)
+}
+.btnLike {
+  height: 40px;
+  width: 40px;
+}
+.btnLike:hover {
+  transform: scale(1.1)
 }
 
 
