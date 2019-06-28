@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :home_pages
   get 'photos/index'
   get 'albums/index'
   get 'users/index'
