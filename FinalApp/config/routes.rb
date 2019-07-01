@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'photos/index'
+  get 'albums/index'
+  get 'users/index'
   resources :albums
   resources :photos
   resources :users

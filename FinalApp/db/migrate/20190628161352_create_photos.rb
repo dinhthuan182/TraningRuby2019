@@ -5,7 +5,8 @@ class CreatePhotos < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :description
       t.string :image
-
+      t.boolean :sharing_mode
+      t.references :user, index: true
       t.timestamps
     end
   end

@@ -10,37 +10,58 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_28_161829) do
+ActiveRecord::Schema.define(version: 2019_07_01_150741) do
 
-  create_table "albums", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.integer "poster"
+  create_table "albums", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.string "list_image"
+    t.boolean "sharing_mode"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_albums_on_user_id"
   end
 
-  create_table "follows", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.integer "follower_one"
-    t.integer "follower_two"
+  create_table "follows", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "follower_id"
+    t.bigint "followed_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["followed_id"], name: "index_follows_on_followed_id"
+    t.index ["follower_id"], name: "index_follows_on_follower_id"
+    t.index ["user_id"], name: "index_follows_on_user_id"
   end
 
-  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.integer "liker"
-    t.integer "post"
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "postable_type"
+    t.bigint "postable_id"
+    t.bigint "photo_id"
+    t.bigint "album_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["album_id"], name: "index_likes_on_album_id"
+    t.index ["photo_id"], name: "index_likes_on_photo_id"
+    t.index ["postable_type", "postable_id"], name: "index_likes_on_postable_type_and_postable_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
-  create_table "photos", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.integer "poster"
+  create_table "photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.string "image"
+    t.boolean "sharing_mode"
+    t.bigint "user_id"
+    t.bigint "album_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["album_id"], name: "index_photos_on_album_id"
+    t.index ["user_id"], name: "index_photos_on_user_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "fname"
     t.string "lname"
     t.string "email"
@@ -51,4 +72,11 @@ ActiveRecord::Schema.define(version: 2019_06_28_161829) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "albums", "users"
+  add_foreign_key "follows", "users"
+  add_foreign_key "likes", "albums"
+  add_foreign_key "likes", "photos"
+  add_foreign_key "likes", "users"
+  add_foreign_key "photos", "albums"
+  add_foreign_key "photos", "users"
 end

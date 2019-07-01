@@ -25,6 +25,13 @@ form input[type=email], form input[type=password], form input[type=text] {
 .input-file-container {
   position: relative;
   width: 100px;
+  display: block;
+}
+.input-file-container img {
+  position: absolute;
+  z-index: 0;
+  width="200px";
+  height="200px";
 }
 .js .input-file-trigger {
   display: block;
@@ -47,10 +54,15 @@ form input[type=email], form input[type=password], form input[type=text] {
   opacity: 0;
   padding: 14px 0;
   cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  margin-top: 160px;
 }
 .js .input-file:hover + .input-file-trigger,
 .js .input-file:focus + .input-file-trigger,
-.js .input-file-trigger:hover,
+.js .input-file-trigger:hover{
+  transform: scale(1.1);
+},
 .js .input-file-trigger:focus {
   background: white;
   opacity: 0.8;
