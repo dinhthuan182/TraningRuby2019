@@ -43,18 +43,17 @@ input.btnSubmit:active{
   with: 165px;
   opacity:0.3;
 }
-button.btnDelete {
+.btnDelete {
   background-color: red;
   color: white;
   transition: transform .2s;
 }
-
-button.btnDelete:hover {
+.btnDelete:hover {
   background-color: #ff0000a8;
   color: white;
 }
 
-button.btnDelete:active {
+.btnDelete:active {
   background-color: #ff0000a8;
   color: white;
   transform: scale(1.05);

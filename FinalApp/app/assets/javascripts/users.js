@@ -2,22 +2,31 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
-function showImagePhoto(){
-  if(this.files && this.files[0])
-  {
-    var obj = new FileReader();
-    obj.onload = function(data){
-      $('.images').prepend('<div class="img float-left mt-2 mr-1"><div ng-repeat="file in imagefinaldata" class="img_wrp"><img style="height: 180px; width:180px" src="' + data.target.result + '" class="imgResponsiveMax" alt="" /><img class="btnClose m-1" src="/assets/close.png" onClick="clickClose()"style="width:30px; height: 30px" /></div></div>');
-      $('.btnUpload').css({ display: "none" });
-      $(document).ready(function(){
-        $('img.btnClose').click(
-          function(){
-            $(this).parent().parent().empty();
-            $('.btnUpload').css({ display: "block" });
-          }
-          )
-        })
+$(document).ready(function(){
+  $("#loginForm").validate({
+    rules: {
+      "username": {
+        required: true,
+        maxlength: 255
+      },
+      "password": {
+        required: true,
+        validatePassword: true,
+        maxlength: 64
+      }
+    },
+    messages: {
+      "username": {
+        required: "Bắt buộc nhập username",
+        maxlength: "Email tối đa 255 ký tự"
+      },
+      "password": {
+        required: "Bắt buộc nhập password",
+        maxlength: "Mật khẩu rối đa 64 ký tự"
+      }
     }
-    obj.readAsDataURL(this.files[0]);
-  }
-}
+  });
+    // $.validator.addMethod("validatePassword", function (value, element) {
+  //           return this.optional(element) || /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$/i.test(value);
+  //       }, "Hãy nhập password từ 8 đến 16 ký tự bao gồm chữ hoa, chữ thường và ít nhất một chữ số");
+});

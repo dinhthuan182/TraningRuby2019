@@ -1,7 +1,11 @@
+<% provide(:title, "Đăng nhập") %>
 <body class="conrainer">
   <!-- <div class="row"> -->
     <div class="loginForm">
         <%= form_for(:session, url: login_path) do |f| %>
+        <% flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, class: "alert #{name}" %>
+        <% end -%>
         <div class="form-group mt-4">
           <h2><b>Fakebook Login</b></h2>
           <img src="/assets/logoLogin.png" alt="Avatar" class=" rounded-circle mt-2 img-responsive">

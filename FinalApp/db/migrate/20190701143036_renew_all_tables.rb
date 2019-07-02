@@ -4,7 +4,7 @@ class RenewAllTables < ActiveRecord::Migration[5.2]
       t.string :fname
       t.string :lname
       t.string :email
-      t.string :password
+      t.string :password_digest
       t.string :avatar
       t.boolean :activated
       t.timestamps
@@ -12,7 +12,7 @@ class RenewAllTables < ActiveRecord::Migration[5.2]
     create_table :photos do |t|
       t.string :title
       t.text :description
-      t.string :image
+      t.attachment :image
       t.boolean :sharing_mode
       t.references :user, index: true
       t.references :album, index: true

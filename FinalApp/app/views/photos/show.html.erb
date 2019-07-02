@@ -1,9 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Poster:</strong>
-  <%= @photo.poster %>
-</p>
 
 <p>
   <strong>Title:</strong>
@@ -17,7 +13,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @photo.image %>
+  <%= image_tag(@photo.image.url) if @photo.image.exists? %>
 </p>
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |

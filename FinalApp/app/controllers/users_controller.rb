@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  # before_filter :login_required, :except => [:new, :create, :forgot, :reset, :process_forgot_password, :activate]
+
 
   # GET /users
   # GET /users.json
@@ -21,9 +23,6 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
-  end
-  def login
-
   end
 
   # POST /users

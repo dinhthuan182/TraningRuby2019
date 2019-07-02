@@ -51,7 +51,10 @@ ActiveRecord::Schema.define(version: 2019_07_01_150741) do
   create_table "photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.string "image"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
     t.boolean "sharing_mode"
     t.bigint "user_id"
     t.bigint "album_id"
@@ -65,7 +68,7 @@ ActiveRecord::Schema.define(version: 2019_07_01_150741) do
     t.string "fname"
     t.string "lname"
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.string "avatar"
     t.boolean "activated"
     t.datetime "created_at", null: false
